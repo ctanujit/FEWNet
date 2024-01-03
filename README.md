@@ -32,14 +32,20 @@ This repository serves as the source code for the research paper titled "Forecas
 * The code module, along with the datasets, can be referred to reproduce the tables, charts, and final performance evaluation.
 
 * To cite this work, please use
-* Sengupta, Shovon, Tanujit Chakraborty, and Sunny Kumar Singh. "Forecasting CPI inflation under economic policy and geo-political uncertainties." arXiv preprint arXiv:2401.00249 (2023).
-* @article{sengupta2023forecasting,
+
+  Sengupta, Shovon, Tanujit Chakraborty, and Sunny Kumar Singh. "Forecasting CPI inflation under economic policy and geo-political uncertainties." arXiv preprint arXiv:2401.00249 (2023).
+
+  @article{sengupta2023forecasting,
+  
   title={Forecasting CPI inflation under economic policy and geo-political uncertainties},
+  
   author={Sengupta, Shovon and Chakraborty, Tanujit and Singh, Sunny Kumar},
+  
   journal={arXiv preprint arXiv:2401.00249},
+  
   year={2023},
-  note=https://arxiv.org/pdf/2401.00249.pdf
-}
+  
+  note=https://arxiv.org/pdf/2401.00249.pdf}
   
 ## References
 * <a id="1">[1]</a> [CPI Data: Brazil](https://fred.stlouisfed.org/series/BRACPIALLMINMEI)
