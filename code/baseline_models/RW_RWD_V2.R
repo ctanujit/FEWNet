@@ -16,7 +16,6 @@ rwf_bzl_12m <- rwf(
   ts(cpi.train.df$CPI_inflation_rate),
   h = 12,
   drift = FALSE,
-  # model = 'ets',
   lambda = "auto",
   biasadj = TRUE,
 )
@@ -30,7 +29,6 @@ rwfd_bzl_12m <- rwf(
   ts(cpi.train.df$CPI_inflation_rate),
   h = 12,
   drift = TRUE,
-  # model = 'ets',
   lambda = NULL,
   biasadj = TRUE,
 )
@@ -45,18 +43,15 @@ getwd()
 
 # Train Data
 cpi.train.df<-read.csv("df_train_cpi_rus_lag_all_12M_R.csv",header=TRUE)
-str(cpi.train.df)
 
 # Test Data
 cpi.test.df<-read.csv("df_test_cpi_rus_lag_all_12M_R.csv",header=TRUE)
-str(cpi.test.df)
 
 # Generate 12M Forward Forecasts using RWF method
 rwf_rus_12m <- rwf(
   ts(cpi.train.df$cpi_inflation_rate),
   h = 12,
   drift = FALSE,
-  # model = 'ets',
   lambda = "auto",
   biasadj = TRUE,
 )
@@ -69,7 +64,6 @@ rwfd_rus_12m <- rwf(
   ts(cpi.train.df$cpi_inflation_rate),
   h = 12,
   drift = TRUE,
-  # model = 'ets',
   lambda = NULL,
   biasadj = TRUE,
 )
@@ -92,7 +86,6 @@ rwf_ind_12m <- rwf(
   ts(cpi.train.df$CPI_inflation_Rate),
   h = 12,
   drift = FALSE,
-  # model = 'ets',
   lambda = "auto",
   biasadj = TRUE,
 )
@@ -105,7 +98,6 @@ rwfd_ind_12m <- rwf(
   ts(cpi.train.df$CPI_inflation_Rate),
   h = 12,
   drift = TRUE,
-  # model = 'ets',
   lambda = NULL,
   biasadj = TRUE,
 )
@@ -128,7 +120,6 @@ rwf_chn_12m <- rwf(
   ts(cpi.train.df$cpi_inflation_rate),
   h = 12,
   drift = FALSE,
-  # model = 'ets',
   lambda = NULL,
   biasadj = TRUE,
 )
@@ -141,7 +132,6 @@ rwfd_chn_12m <- rwf(
   ts(cpi.train.df$cpi_inflation_rate),
   h = 12,
   drift = TRUE,
-  # model = 'ets',
   lambda = NULL,
   biasadj = TRUE,
 )
@@ -152,17 +142,15 @@ rwfd_chn_fcst_12m
 #################### END of CODE :12M ########################
 
 # Brazil - FH:24M
-setwd("/Users/shovonsengupta/Desktop/All/Time_Series_Forecasting_Research/Inflation_Forecasting_BRIC_Paper/data/BRIC_CPI_INF_UNCERT_data/base_data/brazil")
+setwd("/data/brazil")
 getwd()
 
 # Train Data
 cpi.train.df<-read.csv("df_train_cpi_bzl_lag_all_24M_R.csv",header=TRUE)
-str(cpi.train.df)
 
 
 # Test Data
 cpi.test.df<-read.csv("df_test_cpi_bzl_lag_all_24M_R.csv",header=TRUE)
-str(cpi.test.df)
 
 
 # Generate 24M Forward Forecasts using RWF method
@@ -170,7 +158,6 @@ rwf_bzl_24m <- rwf(
   ts(cpi.train.df$CPI_inflation_rate),
   h = 24,
   drift = FALSE,
-  # model = 'ets',
   lambda = "auto",
   biasadj = TRUE,
 )
@@ -184,7 +171,6 @@ rwfd_bzl_24m <- rwf(
   ts(cpi.train.df$CPI_inflation_rate),
   h = 24,
   drift = TRUE,
-  # model = 'ets',
   lambda = NULL,
   biasadj = TRUE,
 )
@@ -195,7 +181,7 @@ rwfd_bzl_fcst_24m
 
 ############## Generating RW and RWD Forecasts for BRIC Countries: 24M ############
 # Brazil - FH:24M
-setwd("/Users/shovonsengupta/Desktop/All/Time_Series_Forecasting_Research/Inflation_Forecasting_BRIC_Paper/data/BRIC_CPI_INF_UNCERT_data/base_data/brazil")
+setwd("/data/brazil")
 getwd()
 
 # Train Data
@@ -209,7 +195,6 @@ rwf_bzl_24m <- rwf(
   ts(cpi.train.df$CPI_inflation_rate),
   h = 24,
   drift = FALSE,
-  # model = 'ets',
   lambda = "auto",
   biasadj = TRUE,
 )
@@ -223,7 +208,6 @@ rwfd_bzl_24m <- rwf(
   ts(cpi.train.df$CPI_inflation_rate),
   h = 24,
   drift = TRUE,
-  # model = 'ets',
   lambda = NULL,
   biasadj = TRUE,
 )
@@ -233,7 +217,7 @@ rwfd_bzl_fcst_24m <- rwfd_bzl_24m$mean
 rwfd_bzl_fcst_24m
 
 # Russia - FH:24M
-setwd("/Users/shovonsengupta/Desktop/All/Time_Series_Forecasting_Research/Inflation_Forecasting_BRIC_Paper/data/BRIC_CPI_INF_UNCERT_data/base_data/russia")
+setwd("/data/russia")
 getwd()
 
 # Train Data
@@ -267,7 +251,7 @@ rwfd_rus_fcst_24m <- rwfd_rus_24m$mean
 rwfd_rus_fcst_24m
 
 # India - FH:24M
-setwd("/Users/shovonsengupta/Desktop/All/Time_Series_Forecasting_Research/Inflation_Forecasting_BRIC_Paper/data/BRIC_CPI_INF_UNCERT_data/base_data/india")
+setwd("/data/india")
 getwd()
 
 # Train Data
@@ -301,7 +285,7 @@ rwfd_ind_fcst_24m <- rwfd_ind_24m$mean
 rwfd_ind_fcst_24m
 
 # China - FH:24M
-setwd("/Users/shovonsengupta/Desktop/All/Time_Series_Forecasting_Research/Inflation_Forecasting_BRIC_Paper/data/BRIC_CPI_INF_UNCERT_data/base_data/china")
+setwd("/data/china")
 getwd()
 
 # Train Data
