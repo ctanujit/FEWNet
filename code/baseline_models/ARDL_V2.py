@@ -7,7 +7,7 @@ import statsmodels as sm
 df_cpi_rus = pd.read_csv("RUS_CPI_inf_rate_Monthly_202201.csv",
                         date_parser=True,
                         encoding='latin1')
-############# Data Pre-processing: can be ignored Example code ##########################
+############# Data Pre-processing: (can be ignored) Example code ##########################
 df_cpi_rus.info()
 
 df_cpi_rus.rename(columns = {'ï»¿date':'date'}, inplace = True)
@@ -212,7 +212,7 @@ dataset_new_lag
 dataset_new_lag2 = dataset_new_lag.dropna(axis = 0, how ='any')
 print(dataset_new_lag.shape)
 print(dataset_new_lag2.shape)
-############# End of Data Pre-processing: can be ignored Example code ##########################
+############# End of Data Pre-processing: (can be ignored) Example code ##########################
 
 ########################## Train - Test data creation ######################
 # Create Train - Test Data
