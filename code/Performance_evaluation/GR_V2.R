@@ -91,8 +91,9 @@ fluct_test_fewnet_xgboost_24m <- fluctuation_test(score_FEWNet,
 fluct_test_fewnet_xgboost_24m
 
 ############################# GR Test for Russia: 24M ###################
-setwd("/Users/shovonsengupta/Desktop/All/Time_Series_Forecasting_Research/Inflation_Forecasting_BRIC_Paper/Github/github_code_final/FEWNet/dataset/russia")
+setwd("/data/russia")
 getwd()
+
 # 24M
 data_russia_24M <- read.csv("GR_test_russia_24M_data.csv",header=TRUE)
 str(data_russia_24M)
@@ -175,8 +176,9 @@ fluct_test_fewnet_xgboost_24m <- fluctuation_test(score_FEWNet,
 fluct_test_fewnet_xgboost_24m
 
 ############################# GR Test for India: 24M ########################
-setwd("/Users/shovonsengupta/Desktop/All/Time_Series_Forecasting_Research/Inflation_Forecasting_BRIC_Paper/Github/github_code_final/FEWNet/dataset/india")
+setwd("/data/india")
 getwd()
+
 # 24M
 data_india_24M <- read.csv("GR_test_india_24M_data.csv",header=TRUE)
 str(data_india_24M)
@@ -259,8 +261,9 @@ fluct_test_fewnet_xgboost_24m <- fluctuation_test(score_FEWNet,
 fluct_test_fewnet_xgboost_24m
 
 ############################# GR Test for China: 24M  ########################
-setwd("/Users/shovonsengupta/Desktop/All/Time_Series_Forecasting_Research/Inflation_Forecasting_BRIC_Paper/Github/github_code_final/FEWNet/dataset/china")
+setwd("/data/china")
 getwd()
+
 # 24M
 data_china_24M <- read.csv("GR_test_china_24M_data.csv",header=TRUE)
 str(data_china_24M)
@@ -341,8 +344,9 @@ fluct_test_fewnet_xgboost_24m <- fluctuation_test(score_FEWNet,
 fluct_test_fewnet_xgboost_24m
 
 ############################# GR Test for Brazil: 12M ########################
-setwd("/Users/shovonsengupta/Desktop/All/Time_Series_Forecasting_Research/Inflation_Forecasting_BRIC_Paper/Github/github_code_final/FEWNet/dataset/brazil")
+setwd("/data/brazil")
 getwd()
+
 # 12M
 data_brazil_12M <- read.csv("GR_test_brazil_12M_data.csv",header=TRUE)
 str(data_brazil_12M)
@@ -411,8 +415,9 @@ fluct_test_fewnet_xgboost_12m <- fluctuation_test(score_FEWNet,
 fluct_test_fewnet_xgboost_12m
 
 ############################# GR Test for Russia: 12M ########################
-setwd("/Users/shovonsengupta/Desktop/All/Time_Series_Forecasting_Research/Inflation_Forecasting_BRIC_Paper/Github/github_code_final/FEWNet/dataset/russia")
+setwd("/data/russia")
 getwd()
+
 # 12M
 data_russia_12M <- read.csv("GR_test_russia_12M_data.csv",header=TRUE)
 str(data_russia_12M)
@@ -475,8 +480,9 @@ fluct_test_fewnet_xgb_12m <- fluctuation_test(score_FEWNet,
 fluct_test_fewnet_xgb_12m
 
 ############################# GR Test for India: 12M ########################
-setwd("/Users/shovonsengupta/Desktop/All/Time_Series_Forecasting_Research/Inflation_Forecasting_BRIC_Paper/Github/github_code_final/FEWNet/dataset/india")
+setwd("/data/india")
 getwd()
+
 # 24M
 data_india_12M <- read.csv("GR_test_india_12M_data.csv",header=TRUE)
 str(data_india_12M)
@@ -532,8 +538,9 @@ fluct_test_fewnet_xgb_12m <- fluctuation_test(score_FEWNet,
 fluct_test_fewnet_xgb_12m
 
 ############################# GR Test for China: 12M ########################
-setwd("/Users/shovonsengupta/Desktop/All/Time_Series_Forecasting_Research/Inflation_Forecasting_BRIC_Paper/Github/github_code_final/FEWNet/dataset/china")
+setwd("/data/china")
 getwd()
+
 # 24M
 data_china_12M <- read.csv("GR_test_china_12M_data.csv",header=TRUE)
 str(data_china_12M)
