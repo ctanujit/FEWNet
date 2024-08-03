@@ -8,12 +8,11 @@ getwd()
 
 # Train Data
 cpi.train.df<-read.csv("df_train_cpi_bzl_lag_all_12M_R.csv",header=TRUE)
-str(cpi.train.df)
 
 
 # Test Data
 cpi.test.df<-read.csv("df_test_cpi_bzl_lag_all_12M_R.csv",header=TRUE)
-str(cpi.test.df)
+
 
 # Convert the series into timeseries object
 cpi.df.train.ts <- ts(cpi.train.df$CPI_inflation_rate)
@@ -25,7 +24,6 @@ cpi.df.test.ts
 
 # Generate 24M Forward Forecasts using AR model
 ar_12m_brazil <- ar.ols(cpi.df.train.ts,
-                        # aic = TRUE,
                         order.max = 3,
                         demean = TRUE,
                         intercept = TRUE)
@@ -43,12 +41,9 @@ getwd()
 
 # Train Data
 cpi.train.df<-read.csv("df_train_cpi_rus_lag_all_12M_R.csv",header=TRUE)
-str(cpi.train.df)
-
 
 # Test Data
 cpi.test.df<-read.csv("df_test_cpi_rus_lag_all_12M_R.csv",header=TRUE)
-str(cpi.test.df)
 
 # Convert the series into timeseries object
 cpi.df.train.ts <- ts(cpi.train.df$cpi_inflation_rate)
@@ -61,7 +56,6 @@ cpi.df.test.ts
 
 # Generate 24M Forward Forecasts using AR model
 ar_12m_russia <- ar.ols(cpi.df.train.ts,
-                        # aic = TRUE,
                         order.max = 3,
                         demean = TRUE,
                         intercept = TRUE)
@@ -78,12 +72,10 @@ getwd()
 
 # Train Data
 cpi.train.df<-read.csv("df_train_cpi_ind_lag_all_12M_R.csv",header=TRUE)
-str(cpi.train.df)
-
 
 # Test Data
 cpi.test.df<-read.csv("df_test_cpi_ind_lag_all_12M_R.csv",header=TRUE)
-str(cpi.test.df)
+
 
 # Convert the series into timeseries object
 cpi.df.train.ts <- ts(cpi.train.df$CPI_inflation_Rate)
@@ -96,7 +88,6 @@ cpi.df.test.ts
 
 # Generate 24M Forward Forecasts using AR model
 ar_12m_india <- ar.ols(cpi.df.train.ts,
-                       # aic = TRUE,
                        order.max = 3,
                        demean = TRUE,
                        intercept = TRUE)
@@ -113,12 +104,9 @@ getwd()
 
 # Train Data
 cpi.train.df<-read.csv("df_train_cpi_chn_lag_all_12M_R.csv",header=TRUE)
-str(cpi.train.df)
-
 
 # Test Data
 cpi.test.df<-read.csv("df_test_cpi_chn_lag_all_12M_R.csv",header=TRUE)
-str(cpi.test.df)
 
 # Convert the series into timeseries object
 cpi.df.train.ts <- ts(cpi.train.df$cpi_inflation_rate)
@@ -131,7 +119,6 @@ cpi.df.test.ts
 
 # Generate 24M Forward Forecasts using AR model
 ar_12m_china <- ar.ols(cpi.df.train.ts,
-                       # aic = TRUE,
                        order.max = 3,
                        demean = TRUE,
                        intercept = TRUE)
@@ -154,12 +141,9 @@ getwd()
 
 # Train Data
 cpi.train.df<-read.csv("df_train_cpi_bzl_lag_all_24M_R.csv",header=TRUE)
-str(cpi.train.df)
-
 
 # Test Data
 cpi.test.df<-read.csv("df_test_cpi_bzl_lag_all_24M_R.csv",header=TRUE)
-str(cpi.test.df)
 
 # Convert the series into timeseries object
 cpi.df.train.ts <- ts(cpi.train.df$CPI_inflation_rate)
@@ -171,11 +155,9 @@ cpi.df.test.ts
 
 # Generate 24M Forward Forecasts using AR model
 ar_24m_brazil <- ar.ols(cpi.df.train.ts,
-                        # aic = TRUE,
                         order.max = 3,
                         demean = TRUE,
                         intercept = TRUE)
-
 ar_24m_brazil
 
 forecasts_24M <- predict(ar_24m_brazil,
@@ -188,12 +170,10 @@ getwd()
 
 # Train Data
 cpi.train.df<-read.csv("df_train_cpi_rus_lag_all_24M_R.csv",header=TRUE)
-str(cpi.train.df)
-
 
 # Test Data
 cpi.test.df<-read.csv("df_test_cpi_rus_lag_all_24M_R.csv",header=TRUE)
-str(cpi.test.df)
+
 
 # Convert the series into timeseries object
 cpi.df.train.ts <- ts(cpi.train.df$cpi_inflation_rate)
@@ -206,7 +186,6 @@ cpi.df.test.ts
 
 # Generate 24M Forward Forecasts using AR model
 ar_24m_russia <- ar.ols(cpi.df.train.ts,
-                        # aic = TRUE,
                         order.max = 3,
                         demean = TRUE,
                         intercept = TRUE)
@@ -225,12 +204,9 @@ getwd()
 
 # Train Data
 cpi.train.df<-read.csv("df_train_cpi_ind_lag_all_24M_R.csv",header=TRUE)
-str(cpi.train.df)
-
 
 # Test Data
 cpi.test.df<-read.csv("df_test_cpi_ind_lag_all_24M_R.csv",header=TRUE)
-str(cpi.test.df)
 
 # Convert the series into timeseries object
 cpi.df.train.ts <- ts(cpi.train.df$CPI_inflation_Rate)
@@ -243,7 +219,6 @@ cpi.df.test.ts
 
 # Generate 24M Forward Forecasts using AR model
 ar_24m_india <- ar.ols(cpi.df.train.ts,
-                       # aic = TRUE,
                        order.max = 3,
                        demean = TRUE,
                        intercept = TRUE)
@@ -261,12 +236,9 @@ getwd()
 
 # Train Data
 cpi.train.df<-read.csv("df_train_cpi_chn_lag_all_24M_R.csv",header=TRUE)
-str(cpi.train.df)
-
 
 # Test Data
 cpi.test.df<-read.csv("df_test_cpi_chn_lag_all_24M_R.csv",header=TRUE)
-str(cpi.test.df)
 
 # Convert the series into timeseries object
 cpi.df.train.ts <- ts(cpi.train.df$cpi_inflation_rate)
@@ -279,7 +251,6 @@ cpi.df.test.ts
 
 # Generate 24M Forward Forecasts using AR model
 ar_24m_china <- ar.ols(cpi.df.train.ts,
-                       # aic = TRUE,
                        order.max = 3,
                        demean = TRUE,
                        intercept = TRUE)
