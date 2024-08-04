@@ -21,16 +21,12 @@ tml
 # Compute extremal scores of FEWNet_24M and Test Data (theta = 3)
 score_FEWNet <- extremal_score(x = data_brazil_24M$FEWNet_24M,
                                y = data_brazil_24M$test_data_24M,
-                               # functional = "quantile",
-                               # alpha = 0.8,
                                theta = 6)
 score_FEWNet
 str(score_FEWNet)
 
 score_AR <- extremal_score(x = data_brazil_24M$AR_24M,
                            y = data_brazil_24M$test_data_24M,
-                           # functional = "quantile",
-                           # alpha = 0.8,
                            theta = 6)
 score_AR
 str(score_AR)
@@ -39,7 +35,6 @@ str(score_AR)
 murphydiagram(data_brazil_24M$FEWNet_24M, 
               data_brazil_24M$AR_24M,
               data_brazil_24M$test_data_24M, 
-              # alpha = 0.3,
               labels = c("FEWNet", "AR"))
 
 murphydiagram_diff(data_brazil_24M$FEWNet_24M, 
@@ -51,7 +46,6 @@ murphydiagram_diff(data_brazil_24M$FEWNet_24M,
 # Compute extremal scores of XGBoost_24M and Test Data (theta = 3)
 score_XGBoost <- extremal_score(x = data_brazil_24M$XGBoost_24M,
                                 y = data_brazil_24M$test_data_24M, 
-                                # functional = "quantile",
                                 theta = 12)
 score_XGBoost
 str(score_XGBoost)
@@ -74,7 +68,6 @@ murphydiagram_diff(data_brazil_24M$FEWNet_24M,
 fluct_test_fewnet_ar_24m <- fluctuation_test(score_FEWNet, 
                                              score_AR,
                                              mu = 0.3,
-                                             # dmv_fullsample = TRUE,
                                              conf_level = 0.10,
                                              time_labels = tml, 
                                              lag_truncate = 1)
@@ -84,7 +77,6 @@ fluct_test_fewnet_ar_24m
 fluct_test_fewnet_xgboost_24m <- fluctuation_test(score_FEWNet, 
                                                   score_XGBoost,
                                                   mu = 0.1,
-                                                  # dmv_fullsample = TRUE,
                                                   conf_level = 0.10,
                                                   time_labels = tml, 
                                                   lag_truncate = 1)
