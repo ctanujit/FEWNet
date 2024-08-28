@@ -62,7 +62,6 @@ modwtobj.ind <- modwt(x, filter="haar", n.levels = 5, boundary = "periodic", fas
 summary(modwtobj.ind)
 # Generate the Plot
 plot(modwtobj.ind)
-
 ######################## China ###########################
 # Working directory
 setwd("./FEWNet/dataset/china")
@@ -81,5 +80,3 @@ summary(modwtobj.chn)
 # Generate the Plot
 plot(modwtobj.chn)
 ############################### END of Code ##################################
-
-plot(modwtobj.bzl)
