@@ -15,9 +15,6 @@ set.seed(20240101) # For reproducibility, we are using this seed value
 setwd("./FEWNet/dataset/brazil")
 getwd()
 
-setwd("/Users/shovonsengupta/Desktop/All/Time_Series_Forecasting_Research/Inflation_Forecasting_BRIC_Paper/Github/github_code_final/FEWNet/dataset/brazil")
-getwd()
-
 # Brazil: 12M forecasts from FEWNet, AR and XGBoost Models datasets
 data_brazil_12M <- read.csv("GR_test_brazil_12M_data.csv",header=TRUE)
 str(data_brazil_12M)
@@ -69,9 +66,6 @@ fluct_test_fewnet_xgboost_12m
 ########################### Russia #######################
 # Working directory
 setwd("./FEWNet/dataset/russia")
-getwd()
-
-setwd("/Users/shovonsengupta/Desktop/All/Time_Series_Forecasting_Research/Inflation_Forecasting_BRIC_Paper/Github/github_code_final/FEWNet/dataset/russia")
 getwd()
 
 # Russia: 12M forecasts from FEWNet, AR and XGBoost Models datasets
@@ -128,9 +122,6 @@ fluct_test_fewnet_xgb_12m
 setwd("./FEWNet/dataset/india")
 getwd()
 
-setwd("/Users/shovonsengupta/Desktop/All/Time_Series_Forecasting_Research/Inflation_Forecasting_BRIC_Paper/Github/github_code_final/FEWNet/dataset/india")
-getwd()
-
 # India: 12M forecasts from FEWNet, AR and XGBoost Models datasets
 data_india_12M <- read.csv("GR_test_india_12M_data.csv",header=TRUE)
 str(data_india_12M)
@@ -181,9 +172,6 @@ fluct_test_fewnet_xgb_12m
 ########################### China #######################
 # Working directory
 setwd("./FEWNet/dataset/china")
-getwd()
-
-setwd("/Users/shovonsengupta/Desktop/All/Time_Series_Forecasting_Research/Inflation_Forecasting_BRIC_Paper/Github/github_code_final/FEWNet/dataset/china")
 getwd()
 
 # China: 12M forecasts from FEWNet, AR and XGBoost Models datasets
