@@ -21,9 +21,6 @@ set.seed(20240101) # For reproducibility, we are using this seed value
 setwd("./FEWNet/dataset")
 getwd()
 
-setwd("/Users/shovonsengupta/Desktop/All/Time_Series_Forecasting_Research/Inflation_Forecasting_BRIC_Paper/data/")
-getwd()
-
 ########################### MCB test: BRIC Countries ################################
 rank_ew <- read_excel("mcb_test_alternative_12M_24M_paper_data.xlsx")
 rank_ew = subset(rank_ew, select = -c(1,2))
