@@ -17,9 +17,6 @@ set.seed(20240101) # For reproducibility, we are using this seed value
 setwd("./FEWNet/dataset/brazil")
 getwd()
 
-setwd("/Users/shovonsengupta/Desktop/All/Time_Series_Forecasting_Research/Inflation_Forecasting_BRIC_Paper/Github/github_code_final/FEWNet/dataset/brazil")
-getwd()
-
 # Data
 cpi.df <- read.csv("Brazil_CPI_inf_rate_Monthly_base_mulvar_cpi_epu_gprc_202201.csv",header=TRUE)
 cpi.df$date <- as.Date(cpi.df$date)
@@ -53,9 +50,6 @@ plot(addi_CPI_BP)
 ################## Russia ############################
 # Set the working directory
 setwd("./FEWNet/dataset/russia")
-getwd()
-
-setwd("/Users/shovonsengupta/Desktop/All/Time_Series_Forecasting_Research/Inflation_Forecasting_BRIC_Paper/Github/github_code_final/FEWNet/dataset/russia")
 getwd()
 
 # Data
@@ -92,9 +86,6 @@ plot(addi_CPI_BP)
 setwd("./FEWNet/dataset/india")
 getwd()
 
-setwd("/Users/shovonsengupta/Desktop/All/Time_Series_Forecasting_Research/Inflation_Forecasting_BRIC_Paper/Github/github_code_final/FEWNet/dataset/india")
-getwd()
-
 # Data
 cpi.df <- read.csv("India_CPI_inf_rate_Monthly_base_mulvar_cpi_epu_gprc_202201.csv",header=TRUE)
 cpi.df$Date <- as.Date(cpi.df$Date)
@@ -112,7 +103,6 @@ length(CPI_india)
 # Define a time period variable
 time <- c(1:109)
 
-
 # Identify the breakpoints
 length(CPI_india)
 CPI_india_bp <- breakpoints(CPI_india ~ time, h = 7)
@@ -129,9 +119,6 @@ plot(addi_CPI_BP)
 ################## China ############################
 # Set the working directory
 setwd("./FEWNet/dataset/china")
-getwd()
-
-setwd("/Users/shovonsengupta/Desktop/All/Time_Series_Forecasting_Research/Inflation_Forecasting_BRIC_Paper/Github/github_code_final/FEWNet/dataset/china")
 getwd()
 
 # Data
@@ -152,7 +139,6 @@ length(CPI_china)
 # Define a time period variable
 time <- c(1:109)
 
-
 # Identify the breakpoints
 length(CPI_china)
 CPI_china_bp <- breakpoints(CPI_china ~ time, h = 7)
@@ -164,7 +150,6 @@ coef(CPI_china_bp)
 # Check for the statistical significance of the break-points
 addi_CPI_BP <- efp(CPI_china ~ breakfactor(CPI_china_bp), type = "OLS-CUSUM")
 plot(addi_CPI_BP)
-
 ####################### End of Code ##############################
 
 
