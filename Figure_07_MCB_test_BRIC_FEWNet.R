@@ -18,7 +18,7 @@ library(readxl)
 set.seed(20240101) # For reproducibility, we are using this seed value
 
 # Set the Working Directory
-setwd("./FEWNet/dataset")
+setwd("/FEWNet/dataset")
 getwd()
 
 
