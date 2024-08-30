@@ -8,10 +8,7 @@ library(gridExtra)
 
 ################## Brazil ############################
 # Set the working directory
-setwd("./FEWNet/dataset/brazil")
-getwd()
-
-setwd("/Users/shovonsengupta/Desktop/All/Time_Series_Forecasting_Research/Inflation_Forecasting_BRIC_Paper/data/BRIC_CPI_INF_UNCERT_data/base_data/brazil")
+setwd("/FEWNet/dataset/brazil")
 getwd()
 
 # Dataset
@@ -40,10 +37,7 @@ grid.arrange(acf_plot, pacf_plot, ncol = 2)
 
 ################## Russia ############################
 # Set the working directory
-setwd("./FEWNet/dataset/russia")
-getwd()
-
-setwd("/Users/shovonsengupta/Desktop/All/Time_Series_Forecasting_Research/Inflation_Forecasting_BRIC_Paper/data/BRIC_CPI_INF_UNCERT_data/base_data/russia")
+setwd("/FEWNet/dataset/russia")
 getwd()
 
 # Dataset
@@ -71,10 +65,7 @@ grid.arrange(acf_plot, pacf_plot, ncol = 2)
 
 ################## India ############################
 # Set the working directory
-setwd("./FEWNet/dataset/india")
-getwd()
-
-setwd("/Users/shovonsengupta/Desktop/All/Time_Series_Forecasting_Research/Inflation_Forecasting_BRIC_Paper/data/BRIC_CPI_INF_UNCERT_data/base_data/india")
+setwd("/FEWNet/dataset/india")
 getwd()
 
 # Dataset
@@ -102,10 +93,7 @@ grid.arrange(acf_plot, pacf_plot, ncol = 2)
 
 ################## China ############################
 # Set the working directory
-setwd("./FEWNet/dataset/china")
-getwd()
-
-setwd("/Users/shovonsengupta/Desktop/All/Time_Series_Forecasting_Research/Inflation_Forecasting_BRIC_Paper/data/BRIC_CPI_INF_UNCERT_data/base_data/china")
+setwd("/FEWNet/dataset/china")
 getwd()
 
 # Dataset
