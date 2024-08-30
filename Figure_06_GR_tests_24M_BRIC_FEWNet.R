@@ -12,7 +12,7 @@ set.seed(20240101) # For reproducibility, we are using this seed value
 
 ########################### Brazil #######################
 # Working directory
-setwd("./FEWNet/dataset/brazil")
+setwd("/FEWNet/dataset/brazil")
 getwd()
 
 # Brazil: 24M forecasts from FEWNet, AR and XGBoost Models datasets
@@ -61,7 +61,7 @@ fluct_test_fewnet_xgboost_24m
 
 ########################### Russia #######################
 # Working directory
-setwd("./FEWNet/dataset/russia")
+setwd("/FEWNet/dataset/russia")
 getwd()
 
 # Russia: 24M forecasts from FEWNet, AR and XGBoost Models datasets
@@ -116,7 +116,7 @@ fluct_test_fewnet_xgboost_24m
 
 ########################### India #######################
 # Working directory
-setwd("./FEWNet/dataset/india")
+setwd("/FEWNet/dataset/india")
 getwd()
 
 
@@ -173,7 +173,7 @@ fluct_test_fewnet_xgboost_24m
 
 ########################### China #######################
 # Working directory
-setwd("./FEWNet/dataset/china")
+setwd("/FEWNet/dataset/china")
 getwd()
 
 # China: 24M forecasts from FEWNet, AR and XGBoost Models datasets
