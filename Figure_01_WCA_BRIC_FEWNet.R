@@ -16,7 +16,7 @@ set.seed(20240101) # For reproducibility, we are using this seed value
 
 ########################### Brazil ####################
 # Set the working directory
-setwd("./FEWNet/dataset/brazil")
+setwd("/FEWNet/dataset/brazil")
 getwd()
 
 # Read the base Table
@@ -70,7 +70,7 @@ axis(side = 3, at = c(seq(0, n, 12)), labels = c(seq(2003, 2021, 1)))
 
 ########################### Russia ####################
 # Set the working directory
-setwd("./FEWNet/dataset/russia")
+setwd("/FEWNet/dataset/russia")
 getwd()
 
 # Read the base Table
@@ -121,7 +121,7 @@ axis(side = 3, at = c(seq(0, n, 12)), labels = c(seq(2003, 2021, 1)))
 
 ########################### India ####################
 # Set the working directory
-setwd("./FEWNet/dataset/india")
+setwd("/FEWNet/dataset/india")
 getwd()
 
 # Read the base Table
@@ -172,7 +172,7 @@ axis(side = 3, at = c(seq(0, n, 12)), labels = c(seq(2003, 2021, 1)))
 
 ########################### China ####################
 # Set the working directory
-setwd("./FEWNet/dataset/china")
+setwd("/FEWNet/dataset/china")
 getwd()
 
 # Read the base Table
