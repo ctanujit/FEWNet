@@ -14,7 +14,7 @@ set.seed(20240101) # For reproducibility, we are using this seed value
 
 ################## Brazil ############################
 # Set the working directory
-setwd("./FEWNet/dataset/brazil")
+setwd("/FEWNet/dataset/brazil")
 getwd()
 
 # Data
@@ -49,7 +49,7 @@ plot(addi_CPI_BP)
 
 ################## Russia ############################
 # Set the working directory
-setwd("./FEWNet/dataset/russia")
+setwd("/FEWNet/dataset/russia")
 getwd()
 
 # Data
@@ -83,7 +83,7 @@ plot(addi_CPI_BP)
 
 ################## India ############################
 # Set the working directory
-setwd("./FEWNet/dataset/india")
+setwd("/FEWNet/dataset/india")
 getwd()
 
 # Data
@@ -118,7 +118,7 @@ plot(addi_CPI_BP)
 
 ################## China ############################
 # Set the working directory
-setwd("./FEWNet/dataset/china")
+setwd("/FEWNet/dataset/china")
 getwd()
 
 # Data
