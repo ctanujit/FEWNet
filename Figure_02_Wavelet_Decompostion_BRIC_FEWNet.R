@@ -10,7 +10,7 @@ set.seed(20240101) # For reproducibility, we are using this seed value
 
 ########################### Brazil ####################
 # Set the working directory
-setwd("./FEWNet/dataset/brazil")
+setwd("/FEWNet/dataset/brazil")
 getwd()
 
 
@@ -29,7 +29,7 @@ plot(modwtobj.bzl)
 
 ######################## Russia ###########################
 # Set the working directory
-setwd("./FEWNet/dataset/russia")
+setwd("/FEWNet/dataset/russia")
 getwd()
 
 # Read the base Table
@@ -47,7 +47,7 @@ plot(modwtobj.rus)
 
 ######################## India ###########################
 # Working directory
-setwd("./FEWNet/dataset/india")
+setwd("/FEWNet/dataset/india")
 getwd()
 
 # Read the base Table
@@ -64,7 +64,7 @@ summary(modwtobj.ind)
 plot(modwtobj.ind)
 ######################## China ###########################
 # Working directory
-setwd("./FEWNet/dataset/china")
+setwd("/FEWNet/dataset/china")
 getwd()
 
 # Read the base Table
