@@ -33,9 +33,6 @@ library(tseries)
 setwd("/FEWNet/dataset/brazil")
 getwd()
 
-setwd("/Users/shovonsengupta/Desktop/All/Time_Series_Forecasting_Research/Inflation_Forecasting_BRIC_Paper/data/BRIC_CPI_INF_UNCERT_data/base_data/brazil")
-getwd()
-
 # Data
 cpi.df <- read.csv("Brazil_CPI_inf_rate_Monthly_base_mulvar_cpi_epu_gprc_202201.csv",header=TRUE)
 # Observations: Output for Obs. in Table 01
@@ -62,9 +59,6 @@ sapply(cpi.df[-1], function(x) entropy(x, method="MM"))
 ################## Russia ############################
 # Set the working directory
 setwd("/FEWNet/dataset/russia")
-getwd()
-
-setwd("/Users/shovonsengupta/Desktop/All/Time_Series_Forecasting_Research/Inflation_Forecasting_BRIC_Paper/data/BRIC_CPI_INF_UNCERT_data/base_data/russia")
 getwd()
 
 # Data
@@ -95,9 +89,6 @@ sapply(cpi.df[-1], function(x) entropy(x, method="MM"))
 setwd("/FEWNet/dataset/india")
 getwd()
 
-setwd("/Users/shovonsengupta/Desktop/All/Time_Series_Forecasting_Research/Inflation_Forecasting_BRIC_Paper/data/BRIC_CPI_INF_UNCERT_data/base_data/india")
-getwd()
-
 # Data
 cpi.df <- read.csv("India_CPI_inf_rate_Monthly_base_mulvar_cpi_epu_gprc_202201.csv",header=TRUE)
 # Observations: Output for Obs. in Table 01
@@ -124,9 +115,6 @@ sapply(cpi.df[-1], function(x) entropy(x, method="MM"))
 ################## China ############################
 # Set the working directory
 setwd("/FEWNet/dataset/china")
-getwd()
-
-setwd("/Users/shovonsengupta/Desktop/All/Time_Series_Forecasting_Research/Inflation_Forecasting_BRIC_Paper/data/BRIC_CPI_INF_UNCERT_data/base_data/china")
 getwd()
 
 # Data
