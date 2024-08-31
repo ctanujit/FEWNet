@@ -34,9 +34,6 @@ library(car)
 setwd("/FEWNet/dataset/brazil")
 getwd()
 
-setwd("/Users/shovonsengupta/Desktop/All/Time_Series_Forecasting_Research/Inflation_Forecasting_BRIC_Paper/data/BRIC_CPI_INF_UNCERT_data/base_data/brazil")
-getwd()
-
 # Data
 cpi.df <- read.csv("Brazil_CPI_inf_rate_Monthly_base_mulvar_cpi_epu_gprc_202201.csv",header=TRUE)
 # Check
@@ -139,9 +136,6 @@ print(test_out_gprc)
 setwd("/FEWNet/dataset/russia")
 getwd()
 
-setwd("/Users/shovonsengupta/Desktop/All/Time_Series_Forecasting_Research/Inflation_Forecasting_BRIC_Paper/data/BRIC_CPI_INF_UNCERT_data/base_data/russia")
-getwd()
-
 # Data
 cpi.df <- read.csv("RUS_CPI_inf_rate_Monthly_mulvar_epu_gprc_202201.csv",header=TRUE)
 # Check
@@ -241,9 +235,6 @@ print(test_out_gprc)
 setwd("/FEWNet/dataset/india")
 getwd()
 
-setwd("/Users/shovonsengupta/Desktop/All/Time_Series_Forecasting_Research/Inflation_Forecasting_BRIC_Paper/data/BRIC_CPI_INF_UNCERT_data/base_data/india")
-getwd()
-
 # Data
 cpi.df <- read.csv("India_CPI_inf_rate_Monthly_base_mulvar_cpi_epu_gprc_202201.csv",header=TRUE)
 # # Check
@@ -340,9 +331,6 @@ print(test_out_gprc)
 ################## China ############################
 # Set the working directory
 setwd("/FEWNet/dataset/china")
-getwd()
-
-setwd("/Users/shovonsengupta/Desktop/All/Time_Series_Forecasting_Research/Inflation_Forecasting_BRIC_Paper/data/BRIC_CPI_INF_UNCERT_data/base_data/china")
 getwd()
 
 # Data
