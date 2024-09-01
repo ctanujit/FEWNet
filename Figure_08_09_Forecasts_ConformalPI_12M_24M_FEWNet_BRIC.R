@@ -5,9 +5,6 @@ set.seed(20240101) # For reproducibility, we are using this seed value
 setwd("/FEWNet/dataset/brazil")
 getwd()
 
-setwd("/Users/shovonsengupta/Desktop/All/Time_Series_Forecasting_Research/Inflation_Forecasting_BRIC_Paper/data/BRIC_CPI_INF_UNCERT_data/base_data/brazil")
-getwd()
-
 # Train Data
 cpi.train.df<-read.csv("df_train_cpi_bzl_lag_all_12M_R.csv",header=TRUE)
 str(cpi.train.df)
@@ -186,9 +183,6 @@ conf_pred
 ################################ Brazil: 24Months ###################################
 # Setting up the working directory
 setwd("/FEWNet/dataset/brazil")
-getwd()
-
-setwd("/Users/shovonsengupta/Desktop/All/Time_Series_Forecasting_Research/Inflation_Forecasting_BRIC_Paper/data/BRIC_CPI_INF_UNCERT_data/base_data/brazil")
 getwd()
 
 # Train Data
@@ -437,9 +431,6 @@ conf_pred
 ################################ Russia: 12Months ###################################
 # Set the working directory
 setwd("/FEWNet/dataset/russia")
-getwd()
-
-setwd("/Users/shovonsengupta/Desktop/All/Time_Series_Forecasting_Research/Inflation_Forecasting_BRIC_Paper/data/BRIC_CPI_INF_UNCERT_data/base_data/russia")
 getwd()
 
 # Train Data
@@ -849,9 +840,6 @@ conf_pred
 setwd("/FEWNet/dataset/india")
 getwd()
 
-setwd("/Users/shovonsengupta/Desktop/All/Time_Series_Forecasting_Research/Inflation_Forecasting_BRIC_Paper/data/BRIC_CPI_INF_UNCERT_data/base_data/india")
-getwd()
-
 # Train Data
 cpi.train.df<-read.csv("df_train_cpi_ind_lag_all_12M_R.csv",header=TRUE)
 str(cpi.train.df)
@@ -1178,7 +1166,6 @@ con_tst
 # [23] 4.518828 4.837364
 ####################End of Code###########################
 
-
 ####################### Conformal Prediction Intervals for 24M forecast numbers ##########################
 library(caretForecast)
 
@@ -1259,9 +1246,6 @@ conf_pred
 ################################ China: 12Months ###################################
 # Set the working directory
 setwd("/FEWNet/dataset/china")
-getwd()
-
-setwd("/Users/shovonsengupta/Desktop/All/Time_Series_Forecasting_Research/Inflation_Forecasting_BRIC_Paper/data/BRIC_CPI_INF_UNCERT_data/base_data/china")
 getwd()
 
 # Train Data
