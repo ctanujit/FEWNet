@@ -3,7 +3,11 @@
 # !pip install -U scikit-learn
 # !pip install -U statsmodels
 # !pip install pmdarima
+# This is an example code for the ARFIMAx model. The same code module can be replicated for other geographies
 
+# Set the working directory
+import os
+os.chdir("/content/FEWNet/dataset/brazil")
 # Load the Data
 import pandas as pd
 df_cpi_bzl = pd.read_csv("Brazil_CPI_inf_rate_Monthly_202201.csv",
