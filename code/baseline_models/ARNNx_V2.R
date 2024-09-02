@@ -1,6 +1,6 @@
 ########################### ARNNx Model for long-term forecasting of CPI Inflation #####################
 ### Explore ARNN model with exogenous factors #####
-# This is an example code for the ARFIMAx model. The same code module can be replicated for other geographies
+# This is an example code for the ARNNx model. The same code module can be replicated for other geographies
 # Read the base Table
 setwd("/FEWNet/dataset/china")
 getwd()
