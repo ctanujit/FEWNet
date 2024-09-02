@@ -1,7 +1,7 @@
 ########################### WARIMAx Model for long-term forecasting of CPI Inflation #####################
-
+# This is an example code for the WARIMax model. The same code module can be replicated for other geographies and other forecast horizons
 # Brazil
-setwd("/dataset/brazil")
+setwd("/FEWNet/dataset/brazil")
 getwd()
 
 # Train Data
