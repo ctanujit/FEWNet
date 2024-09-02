@@ -1,8 +1,8 @@
 ########################### ARFIMAx Model for long-term forecasting of CPI Inflation #####################
-
+# This is an example code for the ARFIMAx model. The same code module can be replicated for other geographies
 ### Explore ARFIMA model with exogenous factors #####
 # Read the base Table
-setwd("/dataset/india")
+setwd("/FEWNet/dataset/india")
 getwd()
 
 # Train Data
@@ -87,5 +87,4 @@ predARFIMAX <- predict(fit_ARFIMAX,
 predARFIMAX[[1]][["Forecast"]]
 # Print the test data series
 con_tst
-
 ############################# End of Code ####################################
