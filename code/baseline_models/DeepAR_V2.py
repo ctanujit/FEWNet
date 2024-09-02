@@ -1,3 +1,5 @@
+# This is an example code for the ARFIMAx model. The same code module can be replicated for other geographies
+
 import pandas as pd
 from gluonts.model.deepar import DeepAREstimator
 from gluonts.trainer import Trainer
@@ -101,6 +103,10 @@ def train_and_predict_deepar(train_path, test_path):
     return predictions
 
 # Example usage:
+# Set the working directory
+import os
+os.chdir("/content/FEWNet/dataset/china")
+
 train_file_path = 'df_train_cpi_chn_lag_all_24M_R.csv'
 test_file_path = 'df_test_cpi_chn_lag_all_24M_R.csv'
 result = train_and_predict_deepar(train_file_path, test_file_path)
