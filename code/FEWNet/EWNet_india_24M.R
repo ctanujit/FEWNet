@@ -1,5 +1,7 @@
-####################### WARNN(X) with only EPU and GPRC as exog ##########################
-setwd("/Users/shovonsengupta/Desktop/All/Time_Series_Forecasting_Research/Inflation_Forecasting_BRIC_Paper/data/BRIC_CPI_INF_UNCERT_data/base_data/india")
+####################### EWNet with only EPU and GPRC as exog ##########################
+### Explore FEWNet model with exogenous factors #####
+# Set the working directory
+setwd("/FEWNet/dataset/india")
 getwd()
 
 # Train Data
@@ -7,19 +9,13 @@ cpi.df <- read.csv("India_CPI_inf_rate_Monthly_base_mulvar_cpi_epu_gprc_202201.c
 str(cpi.df)
 # lets remove the first 12 observations to make the distribution comparable
 cpi.train.df<-cpi.df[13:203,1:4]
-# View(head(cpi.train.df))
-# View(tail(cpi.train.df))
 str(cpi.train.df)
 
 # Test Data
 cpi.test.df<-cpi.df[204:227,1:4]
-# View(head(cpi.test.df))
-# View(tail(cpi.test.df))
 str(cpi.test.df)
 
-# Convert the Date
-library(lubridate)
-# Use Series cpi, EPU and GPR for this exercise
+
 library(dLagM)
 library(tictoc)
 library(lmtest)
@@ -30,11 +26,9 @@ library(egcm)
 library(nnet)
 library(forecast)
 
-str(cpi.train.df)
-str(cpi.test.df)
+
 # create a matrix of external regressors
 xMat.train.new <- matrix(cbind(
-  # cpi.train.df$CPI_inflation_Rate_l1,
   cpi.train.df$log_epu,
   cpi.train.df$gprc_ind
 ),
@@ -42,7 +36,6 @@ ncol=2)
 xMat.train.new
 
 xMat.test.new <- matrix(cbind(
-  # cpi.test.df$CPI_inflation_Rate_l1,
   cpi.test.df$log_epu,
   cpi.test.df$gprc_ind
 ),
@@ -105,7 +98,6 @@ str(cpi.train.df)
 # Training and Test dataset
 con_tr = cpi.train.df$CPI_inflation_Rate
 xreg_tr = cbind(
-  # cpi.train.df$CPI_inflation_Rate_l1,
   cpi.train.df$log_epu,
   cpi.train.df$gprc_ind
 )
@@ -129,7 +121,7 @@ head(xreg_tst)
 xreg_tr[1:6]
 xreg_tr
 
-####################### Proposed WARNNX ##########################
+####################### Proposed EWNet ##########################
 # source("warnnx.R")
 set.seed(43)
 fit_warnnx = WaveletFittingnar(ts(con_tr),
