@@ -1,4 +1,4 @@
-# This is an example code for the ARFIMAx model. The same code module can be replicated for other geographies
+# This is an example code for the DeepAR model. The same code module can be replicated for other geographies
 
 import pandas as pd
 from gluonts.model.deepar import DeepAREstimator
