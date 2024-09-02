@@ -2,7 +2,7 @@
 ############## Generating RW and RWD Forecasts for BRIC Countries: 12M ############
 library(forecast)
 # Brazil - FH: 12M
-setwd("/data/brazil")
+setwd("/FEWNet/data/brazil")
 getwd()
 
 # Train Data
@@ -38,7 +38,7 @@ rwfd_bzl_fcst_12m <- rwfd_bzl_12m$mean
 rwfd_bzl_fcst_12m
 
 # Russia - FH:12M
-setwd("/data/russia")
+setwd("/FEWNet/data/russia")
 getwd()
 
 # Train Data
@@ -72,7 +72,7 @@ rwfd_rus_fcst_12m <- rwfd_rus_12m$mean
 rwfd_rus_fcst_12m
 
 # India - FH:12M
-setwd("/data/india")
+setwd("/FEWNet/data/india")
 getwd()
 
 # Train Data
@@ -106,7 +106,7 @@ rwfd_ind_fcst_12m <- rwfd_ind_12m$mean
 rwfd_ind_fcst_12m
 
 # China - FH:12M
-setwd("/data/china")
+setwd("/FEWNet/data/china")
 getwd()
 
 # Train Data
@@ -141,47 +141,9 @@ rwfd_chn_fcst_12m
 
 #################### END of CODE :12M ########################
 
-# Brazil - FH:24M
-setwd("/data/brazil")
-getwd()
-
-# Train Data
-cpi.train.df<-read.csv("df_train_cpi_bzl_lag_all_24M_R.csv",header=TRUE)
-
-
-# Test Data
-cpi.test.df<-read.csv("df_test_cpi_bzl_lag_all_24M_R.csv",header=TRUE)
-
-
-# Generate 24M Forward Forecasts using RWF method
-rwf_bzl_24m <- rwf(
-  ts(cpi.train.df$CPI_inflation_rate),
-  h = 24,
-  drift = FALSE,
-  lambda = "auto",
-  biasadj = TRUE,
-)
-
-# Get the forecasts values
-rwf_bzl_fcst_24m <- rwf_bzl_24m$mean
-rwf_bzl_fcst_24m
-
-# Generate 24M Forward Forecasts using RWFD method
-rwfd_bzl_24m <- rwf(
-  ts(cpi.train.df$CPI_inflation_rate),
-  h = 24,
-  drift = TRUE,
-  lambda = NULL,
-  biasadj = TRUE,
-)
-
-# Get the forecasts values
-rwfd_bzl_fcst_24m <- rwfd_bzl_24m$mean
-rwfd_bzl_fcst_24m
-
 ############## Generating RW and RWD Forecasts for BRIC Countries: 24M ############
 # Brazil - FH:24M
-setwd("/data/brazil")
+setwd("/FEWNet/data/brazil")
 getwd()
 
 # Train Data
@@ -217,7 +179,7 @@ rwfd_bzl_fcst_24m <- rwfd_bzl_24m$mean
 rwfd_bzl_fcst_24m
 
 # Russia - FH:24M
-setwd("/data/russia")
+setwd("/FEWNet/data/russia")
 getwd()
 
 # Train Data
@@ -251,7 +213,7 @@ rwfd_rus_fcst_24m <- rwfd_rus_24m$mean
 rwfd_rus_fcst_24m
 
 # India - FH:24M
-setwd("/data/india")
+setwd("/FEWNet/data/india")
 getwd()
 
 # Train Data
@@ -285,7 +247,7 @@ rwfd_ind_fcst_24m <- rwfd_ind_24m$mean
 rwfd_ind_fcst_24m
 
 # China - FH:24M
-setwd("/data/china")
+setwd("/FEWNet/data/china")
 getwd()
 
 # Train Data
