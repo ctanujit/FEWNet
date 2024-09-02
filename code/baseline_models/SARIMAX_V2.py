@@ -1,9 +1,9 @@
 ########### SARIMAX Model:Code for generating long-term forecasts ##################
+# This is an example code for the SARIMAx model. The same code module can be replicated for other geographies
 
-
-# Declaring the working library
+# Set the working directory
 import os
-os.chdir('/content')
+os.chdir("/content/FEWNet/dataset/india")
 
 # Load the Data
 import pandas as pd
