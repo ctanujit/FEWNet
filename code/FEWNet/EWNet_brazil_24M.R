@@ -67,7 +67,7 @@ library(Metrics)
 library(nonlinearTseries)
 library(lmtest)
 
-################### Code for the WARNNX in R #######################
+################### Code for the EWNet in R #######################
 WaveletFitting <- function(ts,Wvlevels,bndry,FFlag)
 {
   mraout <- wavelets::modwt(ts, filter='haar', n.levels=Wvlevels,boundary=bndry, fast=FFlag)
@@ -130,7 +130,7 @@ head(xreg_tst)
 xreg_tr[1:6]
 xreg_tr
 
-####################### Proposed WARNNX ##########################
+####################### Proposed EWNet ##########################
 # source("warnnx.R")
 set.seed(50)
 fit_warnnx = WaveletFittingnar(ts(con_tr),
