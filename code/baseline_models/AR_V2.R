@@ -3,7 +3,7 @@
 ################### Brazil:12M ###################
 library(stats)
 
-setwd('/data/brazil')
+setwd('/FEWNet/data/brazil')
 getwd()
 
 # Train Data
@@ -22,7 +22,7 @@ cpi.df.train.ts
 cpi.df.test.ts <- ts(cpi.test.df$CPI_inflation_rate)
 cpi.df.test.ts
 
-# Generate 24M Forward Forecasts using AR model
+# Generate 12M Forward Forecasts using AR model
 ar_12m_brazil <- ar.ols(cpi.df.train.ts,
                         order.max = 3,
                         demean = TRUE,
@@ -35,8 +35,8 @@ forecasts_12M <- predict(ar_12m_brazil,
                          n.ahead = 12)
 forecasts_12M$pred
 
-################### Russia ###################
-setwd('/data/russia')
+################### Russia: 12M ###################
+setwd('/FEWNet/data/russia')
 getwd()
 
 # Train Data
@@ -54,7 +54,7 @@ cpi.df.test.ts <- ts(cpi.test.df$cpi_inflation_rate)
 cpi.df.test.ts
 
 
-# Generate 24M Forward Forecasts using AR model
+# Generate 12M Forward Forecasts using AR model
 ar_12m_russia <- ar.ols(cpi.df.train.ts,
                         order.max = 3,
                         demean = TRUE,
@@ -66,8 +66,8 @@ ar_12m_russia
 forecasts_12M <- predict(ar_12m_russia,
                          n.ahead = 12)
 forecasts_12M$pred
-################### India ###################
-setwd('/data/india')
+################### India: 12M ###################
+setwd('/FEWNet/data/india')
 getwd()
 
 # Train Data
@@ -86,7 +86,7 @@ cpi.df.test.ts <- ts(cpi.test.df$CPI_inflation_Rate)
 cpi.df.test.ts
 
 
-# Generate 24M Forward Forecasts using AR model
+# Generate 12M Forward Forecasts using AR model
 ar_12m_india <- ar.ols(cpi.df.train.ts,
                        order.max = 3,
                        demean = TRUE,
@@ -98,8 +98,8 @@ ar_12m_india
 forecasts_12M <- predict(ar_12m_india,
                          n.ahead = 12)
 forecasts_12M$pred
-################### China ###################
-setwd('/data/china')
+################### China: 12M ###################
+setwd('/FEWNet/data/china')
 getwd()
 
 # Train Data
@@ -117,7 +117,7 @@ cpi.df.test.ts <- ts(cpi.test.df$cpi_inflation_rate)
 cpi.df.test.ts
 
 
-# Generate 24M Forward Forecasts using AR model
+# Generate 12M Forward Forecasts using AR model
 ar_12m_china <- ar.ols(cpi.df.train.ts,
                        order.max = 3,
                        demean = TRUE,
@@ -133,10 +133,10 @@ forecasts_12M$pred
 ##################### End of Code: 12M FH ########################
 
 ############### AR Model for long-term (24M) forecasting of CPI Inflation ##############
-################### Brazil ###################
+################### Brazil: 24M ###################
 library(stats)
 
-setwd('/data/brazil')
+setwd('/FEWNet/data/brazil')
 getwd()
 
 # Train Data
@@ -164,8 +164,8 @@ forecasts_24M <- predict(ar_24m_brazil,
                          n.ahead = 24)
 forecasts_24M$pred
 
-################### Russia ###################
-setwd("/data/russia")
+################### Russia: 24M ###################
+setwd("/FEWNet/data/russia")
 getwd()
 
 # Train Data
@@ -198,8 +198,8 @@ forecasts_24M <- predict(ar_24m_russia,
                          n.ahead = 24)
 forecasts_24M$pred
 
-################### India ###################
-setwd("/data/india")
+################### India: 24M ###################
+setwd("/FEWNet/data/india")
 getwd()
 
 # Train Data
@@ -230,8 +230,8 @@ forecasts_24M <- predict(ar_24m_india,
                          n.ahead = 24)
 forecasts_24M$pred
 
-################### China ###################
-setwd("/data/china")
+################### China: 24M ###################
+setwd("/FEWNet/data/china")
 getwd()
 
 # Train Data
