@@ -1,10 +1,15 @@
 ########### ARDL Model:Code for generating long-term forecasts ##################
 # !pip install -U statsmodels
+# This is an example code for the ARFIMAx model. The same code module can be replicated for other geographies
+
+# Set the working directory
+import os
+os.chdir("/content/FEWNet/dataset/russia")
 
 # Load the Data
 import pandas as pd
 import statsmodels as sm
-df_cpi_rus = pd.read_csv("RUS_CPI_inf_rate_Monthly_202201.csv",
+df_cpi_rus = pd.read_csv("./RUS_CPI_inf_rate_Monthly_202201.csv",
                         date_parser=True,
                         encoding='latin1')
 ############# Data Pre-processing: (can be ignored) Example code ##########################
