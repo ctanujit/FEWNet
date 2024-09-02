@@ -3,7 +3,7 @@
 # !pip install -U scikit-learn
 # !pip install -U statsmodels
 # !pip install pmdarima
-# This is an example code for the ARFIMAx model. The same code module can be replicated for other geographies
+# This is an example code for the ARIMAx model. The same code module can be replicated for other geographies
 
 # Set the working directory
 import os
