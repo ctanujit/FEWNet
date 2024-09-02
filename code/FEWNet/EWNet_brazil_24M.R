@@ -137,7 +137,7 @@ fit_warnnx = WaveletFittingnar(ts(con_tr),
                                Waveletlevels = floor(log(length(con_tr))),
                                boundary = "periodic",
                                FastFlag = TRUE,
-                               MaxARParam = 24, 
+                               MaxARParam = 1, 
                                NForecast = 24)
 fore_warnnx = as.data.frame(fit_warnnx$Finalforecast, h = 24)
 forecast::accuracy(fore_warnnx$`fit_warnnx$Finalforecast`, con_tst)
