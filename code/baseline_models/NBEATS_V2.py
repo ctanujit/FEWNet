@@ -1,3 +1,4 @@
+# This is an example code for the NBeats model. The same code module can be replicated for other geographies
 # Import the required libraries
 import pandas as pd
 import numpy as np
@@ -63,6 +64,10 @@ def generate_nbeats_forecasts(train_csv_path, test_csv_path, output_csv_path):
     return pred
 
 # Example usage:
+# Set the working directory
+import os
+os.chdir("/content/FEWNet/dataset/brazil")
+
 train_csv_path = 'df_train_cpi_bzl_lag_all_24M_R.csv'
 test_csv_path = 'df_test_cpi_bzl_lag_all_24M_R.csv'
 output_csv_path = 'brazil_nbeatsx_24M.csv'
