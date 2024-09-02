@@ -1,5 +1,7 @@
 ####################### EWNet with only EPU and GPRC as exog ##########################
-setwd("/Users/shovonsengupta/Desktop/All/Time_Series_Forecasting_Research/Inflation_Forecasting_BRIC_Paper/data/BRIC_CPI_INF_UNCERT_data/base_data/russia")
+### Explore FEWNet model with exogenous factors #####
+# Set the working directory
+setwd("/FEWNet/dataset/russia")
 getwd()
 
 # Train Data
@@ -183,5 +185,28 @@ con_tst
 # 7.41
 # 8.14
 # 8.40
-
 con_tst
+# 3.05
+# 2.42
+# 2.31
+# 2.55
+# 3.10
+# 3.03
+# 3.21
+# 3.37
+# 3.57
+# 3.67
+# 3.98
+# 4.42
+# 4.91
+# 5.19
+# 5.67
+# 5.78
+# 5.52
+# 6.01
+# 6.51
+# 6.47
+# 6.69
+# 7.41
+# 8.14
+# 8.40
