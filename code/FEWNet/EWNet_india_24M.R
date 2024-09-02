@@ -137,13 +137,6 @@ mase(con_tst, fore_warnnx$`fit_warnnx$Finalforecast`)
 fore_warnnx$`fit_warnnx$Finalforecast`
 con_tst
 
-# > forecast::accuracy(fore_warnnx$`fit_warnnx$Finalforecast`, con_tst)
-# ME     RMSE      MAE       MPE     MAPE
-# Test set -1.379271 2.348076 1.657521 -28.93306 33.37194
-# > smape(con_tst, fore_warnnx$`fit_warnnx$Finalforecast`)*100
-# [1] 25.64367
-# > mase(con_tst, fore_warnnx$`fit_warnnx$Finalforecast`)
-# [1] 2.882665
 # > fore_warnnx$`fit_warnnx$Finalforecast`
 # [1]  8.685350  8.084798  7.738361  7.166208  6.371102  6.244053  6.598069  7.438622  6.638943  5.909177
 # [11]  4.989831  3.807325  3.762364  3.962688  4.957437  6.010948  6.223018  6.633511  6.458059  6.254740
