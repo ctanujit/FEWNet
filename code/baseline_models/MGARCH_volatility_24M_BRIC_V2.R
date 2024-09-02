@@ -4,7 +4,7 @@
 library(MSGARCH)
 ######################### MSGARCH for Brazil: 24M Volatility Forecasting #########################
 
-setwd("/data/brazil")
+setwd("/FEWNet/data/brazil")
 getwd()
 
 # Train Data
@@ -32,7 +32,7 @@ pred <- predict(object = fit, nahead = 24L, do.return.draw = TRUE)
 pred$vol
 
 ######################### MSGARCH for Russia: 24M Volatility Forecasting #########################
-setwd("/data/russia")
+setwd("/FEWNet/data/russia")
 getwd()
 
 # Train Data
@@ -60,7 +60,7 @@ pred <- predict(object = fit, nahead = 24L, do.return.draw = TRUE)
 pred$vol
 
 ######################### MSGARCH for India: 24M Volatility Forecasting #########################
-setwd("/data/india")
+setwd("/FEWNet/data/india")
 getwd()
 
 # Train Data
@@ -87,8 +87,8 @@ set.seed(1234)
 pred <- predict(object = fit, nahead = 24L, do.return.draw = TRUE)
 pred$vol
 
-######################### MSGARCH for China: 12M Volatility Forecasting #########################
-setwd("/data/china")
+######################### MSGARCH for China: 24M Volatility Forecasting #########################
+setwd("/FEWNet/data/china")
 getwd()
 
 # Train Data
