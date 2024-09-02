@@ -1,3 +1,5 @@
+# This is an example code for the Lasso (LR) model. The same code module can be replicated for other geographies and other forecast horizons
+
 # Data processing
 # ==============================================================================
 import numpy as np
@@ -152,6 +154,10 @@ def generate_forecasts_lasso(train_csv_path,test_csv_path, exog_variables):
     return predictions.values
 
 # Example usage:
+# Set the working directory
+import os
+os.chdir("/content/FEWNet/dataset/brazil")
+
 train_csv_path = 'df_train_cpi_ind_lag_all_24M_R.csv'
 test_csv_path = 'df_test_cpi_bzl_lag_all_24M_R.csv'
 exog_variables = ['epu_cycle_cf_l1',
