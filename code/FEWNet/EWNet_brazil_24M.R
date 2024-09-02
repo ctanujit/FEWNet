@@ -1,5 +1,7 @@
 ####################### EWNet with only EPU and GPRC as exog ##########################
-setwd("/Users/shovonsengupta/Desktop/All/Time_Series_Forecasting_Research/Inflation_Forecasting_BRIC_Paper/data/BRIC_CPI_INF_UNCERT_data/base_data/brazil")
+### Explore FEWNet model with exogenous factors #####
+# Set the working directory
+setwd("/FEWNet/dataset/brazil")
 getwd()
 
 # Train Data
@@ -135,7 +137,7 @@ fit_warnnx = WaveletFittingnar(ts(con_tr),
                                Waveletlevels = floor(log(length(con_tr))),
                                boundary = "periodic",
                                FastFlag = TRUE,
-                               MaxARParam = 12, #best=18
+                               MaxARParam = 24, 
                                NForecast = 24)
 fore_warnnx = as.data.frame(fit_warnnx$Finalforecast, h = 24)
 forecast::accuracy(fore_warnnx$`fit_warnnx$Finalforecast`, con_tst)
