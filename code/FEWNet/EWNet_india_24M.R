@@ -15,7 +15,6 @@ str(cpi.train.df)
 cpi.test.df<-cpi.df[204:227,1:4]
 str(cpi.test.df)
 
-
 library(dLagM)
 library(tictoc)
 library(lmtest)
@@ -25,7 +24,6 @@ library(pracma)
 library(egcm)
 library(nnet)
 library(forecast)
-
 
 # create a matrix of external regressors
 xMat.train.new <- matrix(cbind(
@@ -98,6 +96,7 @@ str(cpi.train.df)
 # Training and Test dataset
 con_tr = cpi.train.df$CPI_inflation_Rate
 xreg_tr = cbind(
+  # cpi.train.df$CPI_inflation_Rate_l1,
   cpi.train.df$log_epu,
   cpi.train.df$gprc_ind
 )
@@ -121,14 +120,14 @@ head(xreg_tst)
 xreg_tr[1:6]
 xreg_tr
 
-####################### Proposed EWNet ##########################
+####################### Proposed WARNNX ##########################
 # source("warnnx.R")
 set.seed(43)
 fit_warnnx = WaveletFittingnar(ts(con_tr),
                                Waveletlevels = floor(log(length(con_tr))),
                                boundary = "periodic",
                                FastFlag = TRUE,
-                               MaxARParam = 18,#best=18
+                               MaxARParam = 18,
                                NForecast = 24)
 fore_warnnx = as.data.frame(fit_warnnx$Finalforecast, h = 24)
 forecast::accuracy(fore_warnnx$`fit_warnnx$Finalforecast`, con_tst)
@@ -137,6 +136,14 @@ mase(con_tst, fore_warnnx$`fit_warnnx$Finalforecast`)
 fore_warnnx$`fit_warnnx$Finalforecast`
 con_tst
 
+# p=18
+# > forecast::accuracy(fore_warnnx$`fit_warnnx$Finalforecast`, con_tst)
+#               ME     RMSE      MAE       MPE     MAPE
+# Test set -1.379271 2.348076 1.657521 -28.93306 33.37194
+# > smape(con_tst, fore_warnnx$`fit_warnnx$Finalforecast`)*100
+# [1] 25.64367
+# > mase(con_tst, fore_warnnx$`fit_warnnx$Finalforecast`)
+# [1] 2.882665
 # > fore_warnnx$`fit_warnnx$Finalforecast`
 # [1]  8.685350  8.084798  7.738361  7.166208  6.371102  6.244053  6.598069  7.438622  6.638943  5.909177
 # [11]  4.989831  3.807325  3.762364  3.962688  4.957437  6.010948  6.223018  6.633511  6.458059  6.254740
