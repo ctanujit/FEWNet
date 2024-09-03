@@ -81,3 +81,22 @@ predARNNX$mean
 cpi.test.df$cpi_inflation_rate
 
 ################################### End of Code #############################
+
+############## Sample Code: ERM ##################
+# Calculate the Training MSE for the Empirical Risk Minimization Exercise
+# Fitted Training Values
+pred_arnnx = as.data.frame(fit_ARNNX.1$fitted)
+# pred_arnnx$`fit_ARNNX.1$fitted`
+# Impute the NA with 0
+pred_arnnx[is.na(pred_arnnx)] <- 0
+str(pred_arnnx$x)
+pred_arnnx$x
+# Actual Training Obs
+str(cpi.df.train.ts)
+# con_tr
+# Calculate the Training - MSE
+rmse(cpi.df.train.ts, pred_arnnx$x)**2
+# rmse(con_tr, pred_warnnx$`fit_warnnx$FinalPrediction`)
+# Alternative deduction
+mean((cpi.df.train.ts - pred_arnnx$x)^2)
+################################### End of Code #############################
