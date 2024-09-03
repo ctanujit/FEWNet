@@ -4,10 +4,6 @@
 setwd("/FEWNet/dataset/china")
 getwd()
 
-
-setwd("/Users/shovonsengupta/Desktop/All/Time_Series_Forecasting_Research/Inflation_Forecasting_BRIC_Paper/data/BRIC_CPI_INF_UNCERT_data/base_data/china")
-getwd()
-
 # Train Data
 cpi.df <- read.csv("China_CPI_inf_rate_Monthly_mulvariate_epu_gprc_202201.csv",header=TRUE)
 str(cpi.df)
