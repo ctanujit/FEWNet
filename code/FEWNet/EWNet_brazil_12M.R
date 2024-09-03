@@ -1,11 +1,7 @@
 ####################### EWNet with only EPU and GPRC as exog ##########################
-
 ### Explore EWNet model with exogenous factors #####
 # Set the working directory
 setwd("/FEWNet/dataset/brazil")
-getwd()
-
-setwd("/Users/shovonsengupta/Desktop/All/Time_Series_Forecasting_Research/Inflation_Forecasting_BRIC_Paper/data/BRIC_CPI_INF_UNCERT_data/base_data/brazil")
 getwd()
 
 # Train Data
