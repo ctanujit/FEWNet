@@ -1,6 +1,6 @@
 # Reproducibility Checks:
 * For a complete list of packages and their versions (both R and Python), please refer to the following files [R_package_version.txt](https://github.com/ctanujit/FEWNet/blob/main/R_package_version.txt) and [Python_Package_Version.txt](https://github.com/ctanujit/FEWNet/blob/main/Python_Package_Version.txt)
-* To view "Table 1: Summary Statistics of the Datasets Used in This Study," please refer to [Table_01_Summary_Statistics_BRIC_FEWNet.R](https://github.com/ctanujit/FEWNet/blob/main/Table_01_Summary_Statistics_BRIC_FEWNet.R). All datasets are located in the "/FEWNet/dataset/<country>" folder. Please replace ,<country> with the corresponding country name.
+* To view "Table 1: Summary Statistics of the Datasets Used in This Study," please refer to [Table_01_Summary_Statistics_BRIC_FEWNet.R](https://github.com/ctanujit/FEWNet/blob/main/Table_01_Summary_Statistics_BRIC_FEWNet.R). All datasets are located in the "/FEWNet/dataset/[country]" folder. Please replace ,<country> with the corresponding country name.
 
 
 # FEWNet: Filtered Ensemble Wavelet Neural Network
