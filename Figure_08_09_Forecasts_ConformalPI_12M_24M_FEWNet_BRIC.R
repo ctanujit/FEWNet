@@ -136,6 +136,18 @@ fore_fewnet_12M$`fit_fewnet_12M$Finalforecast`
 con_tst
 # [1]  4.517457  4.559198  5.195379  6.099479  6.759116  8.056819  8.347072  8.994823  9.679774
 # [10] 10.246209 10.672622 10.738501
+
+# Calculate the Training MSE for the Empirical Risk Minimization Exercise
+# Fitted Training Values
+pred_warnnx = as.data.frame(fit_warnnx$FinalPrediction)
+pred_warnnx$`fit_warnnx$FinalPrediction`
+str(pred_warnnx$`fit_warnnx$FinalPrediction`)
+# Actual Training Obs
+str(con_tr)
+# con_tr
+# Calculate the Training - MSE
+rmse(con_tr, pred_warnnx$`fit_warnnx$FinalPrediction`)**2
+# rmse(con_tr, pred_warnnx$`fit_warnnx$FinalPrediction`)
 ####################End of Code###########################
 
 ####################### Conformal Prediction Intervals for 12M forecast numbers ##########################
@@ -347,7 +359,17 @@ con_tst
 # 10.25
 # 10.67
 # 10.74
-
+# Calculate the Training MSE for the Empirical Risk Minimization Exercise
+# Fitted Training Values
+pred_warnnx = as.data.frame(fit_warnnx$FinalPrediction)
+pred_warnnx$`fit_warnnx$FinalPrediction`
+str(pred_warnnx$`fit_warnnx$FinalPrediction`)
+# Actual Training Obs
+str(con_tr)
+# Calculate the Training - MSE
+rmse(con_tr, pred_warnnx$`fit_warnnx$FinalPrediction`)**2
+# Alternative deduction
+mean((con_tr - pred_warnnx$`fit_warnnx$FinalPrediction`)^2)
 #################### End of Code###########################
 
 ####################### Conformal Prediction Intervals for 24M forecast numbers ##########################
@@ -527,7 +549,6 @@ WaveletFittingnar<- function(ts,Waveletlevels,boundary,FastFlag,MaxARParam,NFore
   FinalPrediction <- rowSums(AllWaveletPrediction,na.rm = T)
   return(list(Finalforecast=Finalforecast,FinalPrediction=FinalPrediction))
 }
-
 ####################### Proposed FEWNet Model ##########################
 set.seed(42)
 fit_fewnet_12M = WaveletFittingnar(ts(con_tr),
@@ -560,6 +581,18 @@ fore_fewnet_12M$`fit_fewnet_12M$Finalforecast`
 con_tst
 # [1] 4.912471 5.194607 5.666425 5.782023 5.519744 6.014352 6.511526 6.469069 6.692744 7.408086 8.135334
 # [12] 8.403766
+
+# Calculate the Training MSE for the Empirical Risk Minimization Exercise
+# Fitted Training Values
+pred_warnnx = as.data.frame(fit_warnnx$FinalPrediction)
+pred_warnnx$`fit_warnnx$FinalPrediction`
+str(pred_warnnx$`fit_warnnx$FinalPrediction`)
+# Actual Training Obs
+str(con_tr)
+# Calculate the Training - MSE
+rmse(con_tr, pred_warnnx$`fit_warnnx$FinalPrediction`)**2
+# Alternative deduction
+mean((con_tr - pred_warnnx$`fit_warnnx$FinalPrediction`)^2)
 ####################End of Code###########################
 
 ####################### Conformal Prediction Intervals for 12M forecast numbers ##########################
@@ -757,6 +790,18 @@ con_tst
 # [1] 3.046190 2.423893 2.311721 2.546287 3.098436 3.026511 3.211885 3.366394 3.573624 3.666989 3.977587
 # [12] 4.423442 4.912471 5.194607 5.666425 5.782023 5.519744 6.014352 6.511526 6.469069 6.692744 7.408086
 # [23] 8.135334 8.403766
+
+# Calculate the Training MSE for the Empirical Risk Minimization Exercise
+# Fitted Training Values
+pred_warnnx = as.data.frame(fit_warnnx$FinalPrediction)
+pred_warnnx$`fit_warnnx$FinalPrediction`
+str(pred_warnnx$`fit_warnnx$FinalPrediction`)
+# Actual Training Obs
+str(con_tr)
+# Calculate the Training - MSE
+rmse(con_tr, pred_warnnx$`fit_warnnx$FinalPrediction`)**2
+# Alternative deduction
+mean((con_tr - pred_warnnx$`fit_warnnx$FinalPrediction`)^2)
 ####################End of Code###########################
 
 ####################### Conformal Prediction Intervals for 24M forecast numbers ##########################
@@ -967,6 +1012,18 @@ fore_fewnet_12M$`fit_fewnet_12M$Finalforecast`
 con_tst
 # [1] 3.686636 3.162966 4.494493 5.665658 5.139860 5.257646 5.577841 5.263880 4.811442 4.403048 4.518828
 # [12] 4.837364
+
+# Calculate the Training MSE for the Empirical Risk Minimization Exercise
+# Fitted Training Values
+pred_warnnx = as.data.frame(fit_warnnx$FinalPrediction)
+pred_warnnx$`fit_warnnx$FinalPrediction`
+str(pred_warnnx$`fit_warnnx$FinalPrediction`)
+# Actual Training Obs
+str(con_tr)
+# Calculate the Training - MSE
+rmse(con_tr, pred_warnnx$`fit_warnnx$FinalPrediction`)**2
+# Alternative deduction
+mean((con_tr - pred_warnnx$`fit_warnnx$FinalPrediction`)^2)
 ####################End of Code###########################
 
 ####################### Conformal Prediction Intervals for 12M forecast numbers ##########################
@@ -1164,6 +1221,18 @@ con_tst
 # [1] 9.634551 7.491857 6.840391 5.501618 5.448718 5.095541 5.063291 5.329154 5.625000 5.636574 5.902162
 # [12] 5.284787 3.686636 3.162966 4.494493 5.665658 5.139860 5.257646 5.577841 5.263880 4.811442 4.403048
 # [23] 4.518828 4.837364
+
+# Calculate the Training MSE for the Empirical Risk Minimization Exercise
+# Fitted Training Values
+pred_warnnx = as.data.frame(fit_warnnx$FinalPrediction)
+pred_warnnx$`fit_warnnx$FinalPrediction`
+str(pred_warnnx$`fit_warnnx$FinalPrediction`)
+# Actual Training Obs
+str(con_tr)
+# Calculate the Training - MSE
+rmse(con_tr, pred_warnnx$`fit_warnnx$FinalPrediction`)**2
+# Alternative deduction
+mean((con_tr - pred_warnnx$`fit_warnnx$FinalPrediction`)^2)
 ####################End of Code###########################
 
 ####################### Conformal Prediction Intervals for 24M forecast numbers ##########################
@@ -1342,7 +1411,6 @@ WaveletFittingnar<- function(ts,Waveletlevels,boundary,FastFlag,MaxARParam,NFore
   FinalPrediction <- rowSums(AllWaveletPrediction,na.rm = T)
   return(list(Finalforecast=Finalforecast,FinalPrediction=FinalPrediction))
 }
-
 ####################### Proposed FEWNet Model ##########################
 set.seed(45)
 fit_fewnet_12M = WaveletFittingnar(ts(con_tr),
@@ -1375,6 +1443,18 @@ fore_fewnet_12M$`fit_fewnet_12M$Finalforecast`
 con_tst
 # [1]  0.2697842 -0.2216312 -0.4227999  0.3219466  0.9226485  1.6443494  1.2401969  1.9125597  0.6415800
 # [10]  0.4613803  1.4328405  2.4772978
+
+# Calculate the Training MSE for the Empirical Risk Minimization Exercise
+# Fitted Training Values
+pred_warnnx = as.data.frame(fit_warnnx$FinalPrediction)
+pred_warnnx$`fit_warnnx$FinalPrediction`
+str(pred_warnnx$`fit_warnnx$FinalPrediction`)
+# Actual Training Obs
+str(con_tr)
+# Calculate the Training - MSE
+rmse(con_tr, pred_warnnx$`fit_warnnx$FinalPrediction`)**2
+# Alternative deduction
+mean((con_tr - pred_warnnx$`fit_warnnx$FinalPrediction`)^2)
 ####################End of Code###########################
 
 ####################### Conformal Prediction Intervals for 12M forecast numbers ##########################
@@ -1524,7 +1604,6 @@ WaveletFittingnar<- function(ts,Waveletlevels,boundary,FastFlag,MaxARParam,NFore
   FinalPrediction <- rowSums(AllWaveletPrediction,na.rm = T)
   return(list(Finalforecast=Finalforecast,FinalPrediction=FinalPrediction))
 }
-
 ####################### Proposed FEWNet Model ##########################
 set.seed(42)
 fit_fewnet_24M = WaveletFittingnar(ts(con_tr),
@@ -1570,6 +1649,18 @@ con_tst
 # [1]  4.4131455  5.4205607  5.1803885  4.2711235  3.2467532  2.4118738  2.5069638  1.7576318  2.3875115
 # [10]  1.7304189  0.5415162 -0.4496403  0.2697842 -0.2216312 -0.4227999  0.3219466  0.9226485  1.6443494
 # [19]  1.2401969  1.9125597  0.6415800  0.4613803  1.4328405  2.4772978
+
+# Calculate the Training MSE for the Empirical Risk Minimization Exercise
+# Fitted Training Values
+pred_warnnx = as.data.frame(fit_warnnx$FinalPrediction)
+pred_warnnx$`fit_warnnx$FinalPrediction`
+str(pred_warnnx$`fit_warnnx$FinalPrediction`)
+# Actual Training Obs
+str(con_tr)
+# Calculate the Training - MSE
+rmse(con_tr, pred_warnnx$`fit_warnnx$FinalPrediction`)**2
+# Alternative deduction
+mean((con_tr - pred_warnnx$`fit_warnnx$FinalPrediction`)^2)
 ####################End of Code###########################
 
 ####################### Conformal Prediction Intervals for 24M forecast numbers ##########################
@@ -1647,7 +1738,3 @@ conf_pred
 # -1.92538746	5.68026
 # -1.72254559	5.883102
 #################### End of Code ###########################
-
-
-
-con_tst = cpi.test.df$CPI_inflation_rate
