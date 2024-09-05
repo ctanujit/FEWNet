@@ -1,7 +1,7 @@
 ################################# BRIC: The Markov-Switching GARCH Model (MSGARCH): 12M #######################
 
 ######################### MSGARCH for Brazil: 12M Volatility Forecasting #########################
-setwd("/FEWNet/data/brazil")
+setwd('/FEWNet/dataset/brazil')
 getwd()
 
 # Train Data
@@ -28,7 +28,7 @@ pred <- predict(object = fit, nahead = 12L, do.return.draw = TRUE)
 pred$vol
 
 ######################### MSGARCH for Russia: 12M Volatility Forecasting #########################
-setwd("/FEWNet/data/russia")
+setwd('/FEWNet/dataset/brazil')
 getwd()
 
 # Train Data
@@ -56,7 +56,7 @@ pred <- predict(object = fit, nahead = 12L, do.return.draw = TRUE)
 pred$vol
 
 ######################### MSGARCH for India: 12M Volatility Forecasting #########################
-setwd("/FEWNet/data/india")
+setwd('/FEWNet/dataset/brazil')
 getwd()
 
 # Train Data
@@ -83,7 +83,7 @@ pred <- predict(object = fit, nahead = 12L, do.return.draw = TRUE)
 pred$vol
 
 ######################### MSGARCH for China: 12M Volatility Forecasting #########################
-setwd("/FEWNet/data/china")
+setwd('/FEWNet/dataset/brazil')
 getwd()
 
 # Train Data
