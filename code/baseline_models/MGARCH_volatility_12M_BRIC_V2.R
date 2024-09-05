@@ -1,5 +1,6 @@
 ################################# BRIC: The Markov-Switching GARCH Model (MSGARCH): 12M #######################
-
+# install.packages('MSGARCH')
+library(MSGARCH)
 ######################### MSGARCH for Brazil: 12M Volatility Forecasting #########################
 setwd('/FEWNet/dataset/brazil')
 getwd()
