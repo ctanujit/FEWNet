@@ -1,7 +1,7 @@
 ####################### EWNet with only EPU and GPRC as exog ##########################
 ### Explore EWNet model with exogenous factors #####
 # Set the working directory
-setwd("/FEWNet/dataset/brazil")
+setwd("/FEWNet/dataset/india")
 getwd()
 
 # Train Data
