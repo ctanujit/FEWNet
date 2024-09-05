@@ -1,9 +1,22 @@
 # This is an example code for the DeepAR model. The same code module can be replicated for other geographies
+# Install the required packages
+!pip install gluonts==0.15.1
+!pip install mxnet==1.9.1
+!pip install numpy==1.23.5
+!pip install pandas==2.1.4
 
 import pandas as pd
-from gluonts.model.deepar import DeepAREstimator
-from gluonts.trainer import Trainer
+import numpy as np
+import mxnet as mx
+# from gluonts.model.deepar import DeepAREstimator
+from gluonts.mx.model.deepar import DeepAREstimator # import DeepAREstimator from gluonts.mx.model.deepar 
+# from gluonts.trainer import Trainer
+from gluonts.mx.trainer import Trainer
 from gluonts.dataset.common import ListDataset
+
+# set the seed for reproducibility
+np.random.seed(7)
+mx.random.seed(7)
 
 def train_and_predict_deepar(train_path, test_path):
     # Load the datasets
@@ -55,10 +68,13 @@ def train_and_predict_deepar(train_path, test_path):
                 'cpi_trend_hp_l1']]
 
     # Convert object to DateTimeStamp
-    y['date'] = pd.to_datetime(y['date'])
+    # y['date'] = pd.to_datetime(y['date'])
+    y['date'] = y['date'].astype('datetime64[ns]')
+    y = y.set_index('date')
 
     # Train dataset: cut the last window of length "prediction_length", add "target" and "start" fields
-    start = pd.Timestamp("01-01-2004", freq="M")
+    # start = pd.Timestamp("01-01-2004", freq="M")
+    start = pd.Timestamp("01-01-2004")
     train_ds = ListDataset([{
         'target': y.loc[:'2019-11-01', 'y'],
         'start': start,
@@ -70,6 +86,8 @@ def train_and_predict_deepar(train_path, test_path):
                                                     'cpi_cycle_cf_l1',
                                                     'cpi_trend_hp_l1']].values
     }], freq='M')
+
+    
 
     # Test dataset: use the whole dataset, add "target" and "start" fields
     test_ds = ListDataset([{
@@ -107,7 +125,7 @@ def train_and_predict_deepar(train_path, test_path):
 import os
 os.chdir("/content/FEWNet/dataset/china")
 
-train_file_path = 'df_train_cpi_chn_lag_all_24M_R.csv'
-test_file_path = 'df_test_cpi_chn_lag_all_24M_R.csv'
+train_file_path = './df_train_cpi_chn_lag_all_24M_R.csv'
+test_file_path = './df_test_cpi_chn_lag_all_24M_R.csv'
 result = train_and_predict_deepar(train_file_path, test_file_path)
 print(result)
