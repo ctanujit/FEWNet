@@ -1,5 +1,6 @@
 # This is an example code for the TFT model. The same code module can be replicated for other geographies
-
+# Install the required package
+!pip install darts
 # Import the required libraries
 import pandas as pd
 import numpy as np
