@@ -308,7 +308,7 @@ METRICS = {
 }
 
 
-def evaluate(actual: np.ndarray, predicted: np.ndarray, metrics=('mae', 'mse', 'smape', 'umbrae')):
+def evaluate(actual: np.ndarray, predicted: np.ndarray, metrics=('mae', 'rmse', 'smape', 'mdape', 'mdrae', 'mase')):
     results = {}
     for name in metrics:
         try:
@@ -353,7 +353,8 @@ TFTX_multiexog_7 = np.array([3.63315753442842, 5.12170744345272, 4.8967296738151
                              5.91492552423069, 5.44590132351503, 5.28661890267048, 5.31431174609325, 4.44724601311194,
                              5.08895407944217, 4.0286948007462, 3.52093641113502, 3.62811658712853])
 
-results = CustomMetrics.evaluate_all(actual, TFTX_multiexog_7)
+# results = evaluate_all(actual, TFTX_multiexog_7)
+results = evaluate(actual, TFTX_multiexog_7)
 print("Custom Evaluation Metrics:")
 for metric, value in results.items():
     print(f"{metric}: {value}")
