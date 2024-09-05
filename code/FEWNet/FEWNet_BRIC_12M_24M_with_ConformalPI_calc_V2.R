@@ -1,5 +1,6 @@
 ############################# FEWNet for BRIC Countries: 12M and 24months forwards forecasts ####################
-
+# Installing relevant package
+library(wavelets)
 ################################ Brazil: 12Months ###################################
 # Setting up the working directory
 setwd("/dataset/brazil")
@@ -1144,96 +1145,3 @@ conf_pred
 
 #################### End of Code ###########################
 
-#################### Cross-Validation Framework for FEWNet Algorithm ###########################
-# This code module can be use for all the BRIC countries for hyper-parameter tuning grid-search CV
-
-# Step1
-# Define the FEWNet model
-WaveletFitting <- function(ts,Wvlevels,bndry,FFlag)
-{
-  mraout <- wavelets::modwt(ts, filter='haar', n.levels=Wvlevels,boundary=bndry, fast=FFlag)
-  WaveletSeries <- cbind(do.call(cbind,mraout@W),mraout@V[[Wvlevels]])
-  return(list(WaveletSeries=WaveletSeries,WVSeries=mraout))
-}
-
-WaveletFittingnar<- function(ts,Waveletlevels,boundary,FastFlag,MaxARParam,NForecast)
-
-{
-  WS <- WaveletFitting(ts=ts,Wvlevels=Waveletlevels,bndry=boundary,FFlag=FastFlag)$WaveletSeries
-  AllWaveletForecast <- NULL;AllWaveletPrediction <- NULL
-
-  for(WVLevel in 1:ncol(WS))
-  {
-    ts <- NULL
-    ts <- WS[,WVLevel]
-    WaveletNARFit <- forecast::nnetar(y=as.ts(ts),
-                                      xreg = as.data.frame(xMat.train.new[,1:6]),
-                                      p = MaxARParam,
-                                      repeats = 500)
-    WaveletNARPredict <- WaveletNARFit$fitted
-    WaveletNARForecast <- forecast::forecast(WaveletNARFit,
-                                             xreg = as.data.frame(xMat.train.new[1:24,1:6]),
-                                             h=NForecast)
-    AllWaveletPrediction <- cbind(AllWaveletPrediction,WaveletNARPredict)
-    AllWaveletForecast <- cbind(AllWaveletForecast,as.matrix(WaveletNARForecast$mean))
-  }
-  Finalforecast <- rowSums(AllWaveletForecast,na.rm = T)
-  FinalPrediction <- rowSums(AllWaveletPrediction,na.rm = T)
-  return(list(Finalforecast=Finalforecast,FinalPrediction=FinalPrediction))
-}
-
-# Step2
-# object to store FEWNet summary in a data frame
-model_smry_fewnet <- data.frame()
-
-# Step3
-library(tseries)
-library(forecast)
-library(Metrics)
-library(nonlinearTseries)
-library(lmtest)
-library(nnet)
-library(Metrics)
-# create the CV loop
-set.seed(42)
-for(maxARP in 1:24) {
-  fit_fewnet = WaveletFittingnar(ts(con_tr),
-                                 Waveletlevels = floor(log(length(con_tr))),
-                                 boundary = "periodic",
-                                 FastFlag = TRUE,
-                                 MaxARParam = maxARP,
-                                 NForecast = 24)
-  fore_fewnet = as.data.frame(fit_fewnet$Finalforecast, h = 24)
-
-  # Measuring various accuracy metrics
-  rmse <- rmse(con_tst, fore_fewnet$`fit_fewnet$Finalforecast`)
-  mae <- mae(con_tst, fore_fewnet$`fit_fewnet$Finalforecast`)
-  mape<- mape(con_tst, fore_fewnet$`fit_fewnet$Finalforecast`)
-  smape <- smape(con_tst, fore_fewnet$`fit_fewnet$Finalforecast`)*100
-  mase <- mase(con_tst, fore_fewnet$`fit_fewnet$Finalforecast`)
-  mdae <- mdae(con_tst, fore_fewnet$`fit_fewnet$Finalforecast`)
-  rmsle <- rmsle(con_tst, fore_fewnet$`fit_fewnet$Finalforecast`)
-  ape <- ape(con_tst, fore_fewnet$`fit_fewnet$Finalforecast`)
-
-  # gather everything into a single data frame
-  acc_all <- data.frame(rmse,
-                        mae,
-                        mape,
-                        smape,
-                        mase,
-                        mdae,
-                        rmsle,
-                        ape,
-                        # Value: Max AR Parameter
-                        maxARP
-  )
-
-  # add warnnx summary
-  model_smry_fewnet <- rbind(model_smry_fewnet, acc_all)
-
-}
-
-# show summary
-View(model_smry_fewnet)
-
-#################### End of Code###########################
