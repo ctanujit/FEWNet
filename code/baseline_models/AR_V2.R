@@ -3,7 +3,7 @@
 ################### Brazil:12M ###################
 library(stats)
 
-setwd('/FEWNet/data/brazil')
+setwd('/FEWNet/dataset/brazil')
 getwd()
 
 # Train Data
@@ -36,7 +36,7 @@ forecasts_12M <- predict(ar_12m_brazil,
 forecasts_12M$pred
 
 ################### Russia: 12M ###################
-setwd('/FEWNet/data/russia')
+setwd('/FEWNet/dataset/brazil')
 getwd()
 
 # Train Data
@@ -67,7 +67,7 @@ forecasts_12M <- predict(ar_12m_russia,
                          n.ahead = 12)
 forecasts_12M$pred
 ################### India: 12M ###################
-setwd('/FEWNet/data/india')
+setwd('/FEWNet/dataset/brazil')
 getwd()
 
 # Train Data
@@ -99,7 +99,7 @@ forecasts_12M <- predict(ar_12m_india,
                          n.ahead = 12)
 forecasts_12M$pred
 ################### China: 12M ###################
-setwd('/FEWNet/data/china')
+setwd('/FEWNet/dataset/brazil')
 getwd()
 
 # Train Data
@@ -136,7 +136,7 @@ forecasts_12M$pred
 ################### Brazil: 24M ###################
 library(stats)
 
-setwd('/FEWNet/data/brazil')
+setwd('/FEWNet/dataset/brazil')
 getwd()
 
 # Train Data
@@ -165,7 +165,7 @@ forecasts_24M <- predict(ar_24m_brazil,
 forecasts_24M$pred
 
 ################### Russia: 24M ###################
-setwd("/FEWNet/data/russia")
+setwd('/FEWNet/dataset/brazil')
 getwd()
 
 # Train Data
@@ -199,7 +199,7 @@ forecasts_24M <- predict(ar_24m_russia,
 forecasts_24M$pred
 
 ################### India: 24M ###################
-setwd("/FEWNet/data/india")
+setwd('/FEWNet/dataset/brazil')
 getwd()
 
 # Train Data
@@ -231,7 +231,7 @@ forecasts_24M <- predict(ar_24m_india,
 forecasts_24M$pred
 
 ################### China: 24M ###################
-setwd("/FEWNet/data/china")
+setwd('/FEWNet/dataset/brazil')
 getwd()
 
 # Train Data
