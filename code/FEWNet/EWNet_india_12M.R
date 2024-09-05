@@ -4,9 +4,6 @@
 setwd("/FEWNet/dataset/brazil")
 getwd()
 
-setwd("/Users/shovonsengupta/Desktop/All/Time_Series_Forecasting_Research/Inflation_Forecasting_BRIC_Paper/data/BRIC_CPI_INF_UNCERT_data/base_data/india")
-getwd()
-
 # Train Data
 cpi.df <- read.csv("India_CPI_inf_rate_Monthly_base_mulvar_cpi_epu_gprc_202201.csv",header=TRUE)
 str(cpi.df)
