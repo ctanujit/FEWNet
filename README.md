@@ -58,7 +58,7 @@ uncertainties](https://arxiv.org/pdf/2401.00249). In our study, we consider the 
 
 * To cite this work, please use
 
-  Sengupta, Shovon, Tanujit Chakraborty, and Sunny Kumar Singh. "Forecasting CPI inflation under economic policy and geo-political uncertainties." arXiv preprint arXiv:2401.00249 (2023).
+  Sengupta, Shovon, Tanujit Chakraborty, and Sunny Kumar Singh. "Forecasting CPI inflation under economic policy and geo-political uncertainties." Internation Journal of Forecasting (2024).
 
   @article{sengupta2023forecasting,
   
@@ -66,7 +66,7 @@ uncertainties](https://arxiv.org/pdf/2401.00249). In our study, we consider the 
   
   author={Sengupta, Shovon and Chakraborty, Tanujit and Singh, Sunny Kumar},
   
-  journal={arXiv preprint arXiv:2401.00249},
+  journal={Internation Journal of Forecasting},
   
   year={2023},
   
