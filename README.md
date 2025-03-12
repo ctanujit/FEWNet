@@ -70,7 +70,7 @@ uncertainties](https://arxiv.org/pdf/2401.00249). In our study, we consider the 
   
   year={2024},
   
-  note={https://doi.org/10.1016/j.ijforecast.2024.08.005}
+  note={https://www.sciencedirect.com/science/article/pii/S016920702400092X}
   
 ## References
 * <a id="1">[1]</a> [CPI Data: Brazil](https://fred.stlouisfed.org/series/BRACPIALLMINMEI)
